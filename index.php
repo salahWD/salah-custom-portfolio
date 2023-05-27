@@ -1,6 +1,6 @@
 <?php
 
-  const HOST_PATH = "http://192.168.1.107/salah";
+  const HOST_PATH = "https://salahwd.github.io/salah";
 
   $get = $_GET["url"] ?? "";
   $url = explode("/", $get);
