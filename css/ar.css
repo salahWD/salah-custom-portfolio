@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+html:lang(ar) {
+  direction: rtl;
+}
+html:lang(ar) .navbar .links li a {
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+html:lang(ar) .navbar .links li a i {
+  margin-right: unset;
+  margin-left: 1rem;
+}
+html:lang(ar) .header {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .content-page {
+  padding-left: unset;
+  padding-right: var(--nav-width);
+}
+html:lang(ar) .page {
+  left: unset;
+  right: var(--nav-width);
+}
+html:lang(ar) .page-title h2::before,
+html:lang(ar) .page-title h2::after {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .home .info .title .special.name {
+  font-family: 'Gulzar', serif;
+}
+html:lang(ar) .about .content .info-container {
+  padding-left: 40px;
+}
+html:lang(ar) .about .content .info .item p :is(span, a) {
+  margin-left: unset;
+  margin-right: 4px;
+}
+html:lang(ar) .about :is(.education, .experience) .timeline .item .text {
+  font-size: 17px;
+}
+html:lang(ar) .about .skills .item .percent {
+  left: 0;
+  right: unset;
+}
+html:lang(ar) .about .skills .item .progress-in {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .style-swich {
+  right: unset;
+  left: calc(var(--width) * -1);
+}
+html:lang(ar) .style-swich .s-icon {
+  margin-right: unset;
+  margin-left: 25px;
+  right: unset;
+  left: 100%;
+}
+html:lang(ar) .style-swich.active {
+  left: 0;
+}
+html:lang(ar) .style-swich h4 {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+html:lang(ar) .about :is(.education, .experience) .timeline .item {
+  padding-left: unset;
+  padding-right: 37px;
+}
+html:lang(ar) .about :is(.education, .experience) .timeline .item::before {
+  left: unset;
+  right: 7px;
+}
+html:lang(ar) .about :is(.education, .experience) .timeline .item .circle {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .about :is(.education, .experience) .timeline .item .date i {
+  margin-right: unset;
+  margin-left: 5px;
+}
+html:lang(ar) .btn,
+html:lang(ar) .contact .form .form-item .btn,
+html:lang(ar) .about .content .info .btns .btn {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@keyframes pageShow {
+  from {
+   transform: translateX(-100%);
+   opacity: 0;
+   z-index: 1;
+ }
+ to {
+   opacity: 1;
+   z-index: 2;
+   transform: translateX(0);
+  }
+}
+
+@media (max-width: 991px) {
+  html:lang(ar) .header {
+    left: unset;
+    right: calc(var(--nav-width) * -1);
+  }
+  html:lang(ar) .header.active {
+    left: unset;
+    right: 0;
+  }
+  html:lang(ar) .header .nav-toggler {
+    left: unset;
+    right: 30px;
+  }
+  html:lang(ar) .header.active .nav-toggler {
+    left: unset;
+    right: calc(var(--nav-width) + 30px);
+  }
+  /* .content-page.wide .page {
+    
+  } */
+}
