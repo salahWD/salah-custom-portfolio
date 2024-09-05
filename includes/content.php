@@ -47,7 +47,7 @@
                   <p><?= $_LANG["ABOUT_JOB_TITLE"]; ?> : <span>Full-Stack Developer</span></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <span>salahbakhash@gmail.com</span></p>
+                  <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <span style="text-transform: none;">salahbakhash@gmail.com</span></p>
                 </div>
                 <div class="item padd">
                   <p><?= $_LANG["ABOUT_PHONE"]; ?> : <a href="tel:+905527188570">+905527188570</a></p>
@@ -66,37 +66,44 @@
                 </div>
               </div>
             </div>
-            <div class="skills-section block padd">
-              <div class="row">
-                <div class="col skills">
-                  <h4 class="title">Working Skills</h4>
-                  <div class="row">
-                    <div class="col">
-                      <h6 class="sub-title">LAMP stack:</h6>
-                      <div class="techs">
-                        <img class="tech" src="/images/techs/laravel.png" alt="laravel">
-                        <img class="tech" style="width: 65px;" src="/images/techs/php.png" alt="apache">
-                        <img class="tech" style="width: 75px;" src="/images/techs/mysql.png" alt="mysql">
-                      </div>
+          </div>
+          <div class="skills-section block padd">
+            <div class="row">
+              <div class="col skills">
+                <h4 class="title">Working Stacks</h4>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="sub-title">LAMP stack:</h6>
+                    <div class="techs">
+                      <img class="tech" src="/images/techs/laravel.png" alt="laravel">
+                      <img class="tech" style="width: 65px;" src="/images/techs/php.png" alt="apache">
+                      <img class="tech" style="width: 75px;" src="/images/techs/mysql.png" alt="mysql">
                     </div>
-                    <div class="col">
-                      <h6 class="sub-title">FERN stack:</h6>
-                      <div class="techs">
-                        <img class="tech" src="/images/techs/firebase.png" alt="firebase">
-                        <img class="tech" src="/images/techs/react.png" alt="react">
-                        <img class="tech" style="width: auto;" src="/images/techs/nodejs.png" alt="nodejs">
-                      </div>
+                  </div>
+                  <div class="col">
+                    <h6 class="sub-title">FERN stack:</h6>
+                    <div class="techs">
+                      <img class="tech" src="/images/techs/firebase.png" alt="firebase">
+                      <img class="tech" src="/images/techs/react.png" alt="react">
+                      <img class="tech" style="width: auto;" src="/images/techs/nodejs.png" alt="nodejs">
                     </div>
                   </div>
                 </div>
-                <div class="col knowledge">
-                  <h4 class="title">General Knowledge</h4>
-                  <div class="list">
-                    <div class="item">VueJs</div>
-                    <div class="item">React-Native</div>
-                    <div class="item">Redis</div>
-                    <div class="item">C++</div>
-                  </div>
+              </div>
+              <div class="col knowledge">
+                <h4 class="title">Technical Skills</h4>
+                <div class="list">
+                  <div class="item">Laravel</div>
+                  <div class="item">PHP</div>
+                  <div class="item">MySql</div>
+                  <div class="item">jQuery</div>
+                  <div class="item">React</div>
+                  <div class="item">NextJs</div>
+                  <div class="item">Svelte Kit</div>
+                  <div class="item">React-Native</div>
+                  <div class="item">GitHub</div>
+                  <div class="item">Python</div>
+                  <div class="item">Vercal</div>
                 </div>
               </div>
             </div>

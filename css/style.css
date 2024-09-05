@@ -360,6 +360,10 @@ ul {
 /* ===== Home Section End ===== */
 /* ===== About Section Start ===== */
 
+.about .row .col {
+  flex: unset;
+  width: unset;
+}
 .about .content,
 .about .content .text {
   flex: 0 0 100%;
@@ -385,7 +389,8 @@ ul {
   padding-right: unset;
 }
 .about .content .info-container .info,
-.about .content .info-container > .skills-section {
+.about .content .info-container > .skills-section,
+.about .content .history {
   margin-top: 60px;
 }
 .about .content .info .item {
@@ -416,12 +421,11 @@ ul {
   margin-top: 10px;
   margin-right: 15px;
 }
-.about .content .skills-section .skills > .title,
-.about .content .skills-section .knowledge > .title {
-  color: white;
-  font-weight: 500;
-  font-size: 1.625rem;
-  margin-bottom: 2rem;
+.about .content .skills-section {
+  margin-top: 110px;
+}
+.about .content .skills-section .skills {
+  flex-shrink: 0;
 }
 .about .content .skills-section .skills .sub-title {
   color: var(--text-black-900);
@@ -431,12 +435,6 @@ ul {
   font-size: 16px;
   font-weight: 400;
 }
-.about .content .skills-section .skills > .title {
-  color: white;
-  font-weight: 500;
-  font-size: 1.625rem;
-  margin-bottom: 2rem;
-}
 .about .content .skills-section .knowledge .list {
   display: flex;
   flex-wrap: wrap;
@@ -445,7 +443,7 @@ ul {
 .about .content .skills-section .techs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  column-gap: 8px;
 }
 .about .content .skills-section .techs .tech {
   width: 50px;
@@ -492,7 +490,7 @@ ul {
 .about .content .skills-section .knowledge > .title {
   margin-bottom: 20px;
 }
-.about :is(.education, .experience) > .title {
+.about :is(.education, .experience, .skills, .knowledge) > .title {
   text-transform: capitalize;
   font-size: 24px;
   margin-bottom: 30px;
