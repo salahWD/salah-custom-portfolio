@@ -3,10 +3,12 @@
 const HOST_PATH = "http://customforsalah.test/";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $apiToken = "7245604361:AAGGYvINGChsF_CFY2FiiV6ClTBrj1LZjhI";
+  $env = parse_ini_file('.env');
+
+  $apiToken = $env["API_TOKEN"];
 
   $data = [
-    "chat_id" => "-1002226158241",
+    "chat_id" => $env["CHAT_ID"],
     "text" => "message: " . $_POST["message"] . "\n contact: " . $_POST["contact"] . "\n name: " . $_POST["name"]
   ];
 
