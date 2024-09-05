@@ -2,9 +2,13 @@ if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: light)").matches
 ) {
-  // light mode
+  if (document.body.classList.contains("dark")) {
+    toggleMood("mood-toggler");
+  }
 } else {
-  // dark mode
+  if (document.body.classList.contains("light")) {
+    toggleMood("mood-toggler");
+  }
 }
 
 function setThemeColor(id) {
@@ -24,10 +28,12 @@ function toggleMood(id) {
     document.body.className = "light";
     icon.className = "fa fa-moon";
     localStorage.setItem("mood", 1);
+    setThemeColor(4);
   } else {
     document.body.className = "dark";
     icon.className = "fa fa-sun";
     localStorage.setItem("mood", 2);
+    setThemeColor(1);
   }
 }
 
@@ -71,13 +77,7 @@ window.onload = function () {
 
   if (localStorage.getItem("theme") != null) {
     let root = document.querySelector(`html`);
-    root.classList.remove(
-      "theme-1",
-      "theme-2",
-      "theme-3",
-      "theme-4",
-      "theme-5"
-    );
+    root.classList.remove("theme-1", "theme-4");
     root.classList.add(localStorage.getItem("theme"));
   }
 
@@ -121,12 +121,4 @@ window.onload = function () {
       }
     });
   }
-
-  // const form = document.getElementById("contact-form");
-  // form.addEventListener("submit", function (e) {
-  //   e.preventDefault();
-  //   for (const iterator of new FormData(form).entries()) {
-  //     console.log(iterator);
-  //   }
-  // });
 };

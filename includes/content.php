@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="row info-container">
-            <div class="info block padd">
+            <div class="info block">
               <div class="row">
                 <div class="item padd">
                   <p><?= $_LANG["ABOUT_PROJECT_COUNT"]; ?> : <span>15</span></p>
@@ -47,7 +47,8 @@
                   <p><?= $_LANG["ABOUT_JOB_TITLE"]; ?> : <span>Full-Stack Developer</span></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <span style="text-transform: none;">salahbakhash@gmail.com</span></p>
+                  <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <a href="mailto:salahbakhash@gmail.com" style="text-transform: none;">salahbakhash@gmail.com</a></p>
+                  <!-- <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <a href="mailto:contact@salahbakhash.com" style="text-transform: none;">contact@salahbakhash.com</a></p> -->
                 </div>
                 <div class="item padd">
                   <p><?= $_LANG["ABOUT_PHONE"]; ?> : <a href="tel:+905527188570">+905527188570</a></p>
@@ -66,44 +67,44 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="skills-section block padd">
-            <div class="row">
-              <div class="col skills">
-                <h4 class="title">Working Stacks</h4>
-                <div class="row">
-                  <div class="col">
-                    <h6 class="sub-title">LAMP stack:</h6>
-                    <div class="techs">
-                      <img class="tech" src="/images/techs/laravel.png" alt="laravel">
-                      <img class="tech" style="width: 65px;" src="/images/techs/php.png" alt="apache">
-                      <img class="tech" style="width: 75px;" src="/images/techs/mysql.png" alt="mysql">
+            <div class="skills-section block padd">
+              <div class="row">
+                <div class="col skills">
+                  <h4 class="title">Working Stacks</h4>
+                  <div class="row">
+                    <div class="col">
+                      <h6 class="sub-title">LAMP stack:</h6>
+                      <div class="techs">
+                        <img class="tech" src="/images/techs/laravel.png" alt="laravel">
+                        <img class="tech" style="width: 65px;" src="/images/techs/php.png" alt="apache">
+                        <img class="tech" style="width: 75px;" src="/images/techs/mysql.png" alt="mysql">
+                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <h6 class="sub-title">FERN stack:</h6>
-                    <div class="techs">
-                      <img class="tech" src="/images/techs/firebase.png" alt="firebase">
-                      <img class="tech" src="/images/techs/react.png" alt="react">
-                      <img class="tech" style="width: auto;" src="/images/techs/nodejs.png" alt="nodejs">
+                    <div class="col">
+                      <h6 class="sub-title">FERN stack:</h6>
+                      <div class="techs">
+                        <img class="tech" src="/images/techs/firebase.png" alt="firebase">
+                        <img class="tech" src="/images/techs/react.png" alt="react">
+                        <img class="tech" style="width: auto;" src="/images/techs/nodejs.png" alt="nodejs">
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col knowledge">
-                <h4 class="title">Technical Skills</h4>
-                <div class="list">
-                  <div class="item">Laravel</div>
-                  <div class="item">PHP</div>
-                  <div class="item">MySql</div>
-                  <div class="item">jQuery</div>
-                  <div class="item">React</div>
-                  <div class="item">NextJs</div>
-                  <div class="item">Svelte Kit</div>
-                  <div class="item">React-Native</div>
-                  <div class="item">GitHub</div>
-                  <div class="item">Python</div>
-                  <div class="item">Vercal</div>
+                <div class="col knowledge">
+                  <h4 class="title">Technical Skills</h4>
+                  <div class="list">
+                    <div class="item">Laravel</div>
+                    <div class="item">PHP</div>
+                    <div class="item">MySql</div>
+                    <div class="item">jQuery</div>
+                    <div class="item">React</div>
+                    <div class="item">NextJs</div>
+                    <div class="item">Svelte Kit</div>
+                    <div class="item">React-Native</div>
+                    <div class="item">GitHub</div>
+                    <div class="item">Python</div>
+                    <div class="item">Vercal</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -356,7 +357,7 @@
         <div class="info-item padd">
           <div class="icon"><i class="fa fa-globe-europe"></i></div>
           <h4 class="title"><?= $_LANG["CONTACT_WEBSITE"]; ?></h4>
-          <a href="https:/bakhash.com" class="value link">salahbakhash.com</a>
+          <a href="/" class="value link">salahbakhash.com</a>
         </div>
       </div>
       <h3 class="title padd"><?= $_LANG["CONTACT_SEND_EMAIL"]; ?></h3>
@@ -395,19 +396,8 @@
   </section>
 
   <div class="style-swich" id="color-switch">
-    <div class="toggler s-icon" onclick="toggleActive('color-switch')">
-      <i class="fas fa-cog fa-spin"></i>
-    </div>
     <div class="day-night s-icon" onclick="toggleMood('mood-toggler')">
       <i class="fas fa-sun" id="mood-toggler"></i>
-    </div>
-    <h4><?= $_LANG["CONTROL_THEME_COLORS"]; ?></h4>
-    <div class="colors">
-      <span class="color color-1" onclick="setThemeColor(1)"></span>
-      <span class="color color-2" onclick="setThemeColor(2)"></span>
-      <!-- <span class="color color-3" onclick="setThemeColor(3)"></span> -->
-      <span class="color color-4" onclick="setThemeColor(4)"></span>
-      <!-- <span class="color color-5" onclick="setThemeColor(5)"></span> -->
     </div>
   </div>
 

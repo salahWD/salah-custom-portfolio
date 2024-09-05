@@ -13,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ];
 
   $response = file_get_contents("http://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+  header("Location: " . HOST_PATH);
+  exit();
 }
 
 $get = $_GET["url"] ?? "";

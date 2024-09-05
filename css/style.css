@@ -385,8 +385,6 @@ ul {
 }
 .about .content .info-container {
   flex-direction: column;
-  padding-left: 40px;
-  padding-right: unset;
 }
 .about .content .info-container .info,
 .about .content .info-container > .skills-section,
@@ -469,6 +467,10 @@ ul {
   cursor: default;
   border-radius: 0.5rem;
   padding: 0.5rem 1.25rem;
+}
+.light .about .content .skills-section .knowledge .list .item {
+  background-color: rgba(253, 253, 253, 1);
+  color: var(--text-black-900);
 }
 .about .content .skills-section .row {
   flex-wrap: nowrap;
@@ -780,9 +782,6 @@ ul {
 }
 .style-swich .toggler {
   top: 0;
-}
-.style-swich .day-night {
-  top: 55px;
 }
 .style-swich h4 {
   margin: 0 0 10px;
