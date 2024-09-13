@@ -19,14 +19,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $get = $_GET["url"] ?? "";
 $url = explode("/", $get);
-$langs = ["en", "ar", "tr"]; // 1st language is the default
+$langs = ["en", "ar"]; // 1st language is the default
 
 $pages = ["home", "about", "strength", "portfolio", "contact"]; // 1st page is the default
 
 $_lang = isset($url[0]) && in_array($url[0], $langs) ? $url[0] : $langs[0];
 $_page = isset($url[1]) && in_array($url[1], $pages) ? $url[1] : $pages[0];
 
-include_once "langs/$_lang.php";
+
+if ($_lang == "ar") {
+
+  include_once "langs/ar.php";
+}
+
+function __($txt) {
+
+  global $TRANSLATE;
+
+  if (isset($TRANSLATE) && isset($TRANSLATE[$txt])) {
+    return $TRANSLATE[$txt];
+  }
+  return $txt;
+}
 
 include "includes/head.php";
 include "includes/header.php";

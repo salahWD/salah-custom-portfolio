@@ -4,12 +4,12 @@
     <div class="container">
       <div class="row">
         <div class="info padd">
-          <h3 class="title hello"><?= $_LANG["HOME_TITLE_1"]; ?> <span class="special name"><?= $_LANG["HOME_SUBTITLE_1"]; ?></span></h3>
-          <h3 class="title profession"><?= $_LANG["HOME_TITLE_2"]; ?> <span class="special job"><?= $_LANG["HOME_SUBTITLE_2"]; ?></span></h3>
+          <h3 class="title hello"><?= __("Hello, my name is"); ?> <span class="special name"><?= __("Salah Bakhash"); ?></span></h3>
+          <h3 class="title profession"><?= __("i am a"); ?> <span class="special job"><?= __("Web Developer"); ?></span></h3>
           <p class="text">
-            <?= $_LANG["HOME_INFO_1"]; ?>
+            <?= __("I am a web developer with over 4 years of extensive experience. I have created a lot of personal websites, web stores, landing pages, and much more."); ?>
           </p>
-          <a class="btn hire-me targeted-link" data-page="contact" href="#contact"><?= $_LANG["HOME_CALL_ME"]; ?></a>
+          <a class="btn hire-me targeted-link" data-page="contact" href="#contact"><?= __("Call Me"); ?></a>
         </div>
         <div class="personal-img padd">
           <div class="img-holder">
@@ -24,16 +24,16 @@
     <div class="container">
       <div class="row">
         <div class="page-title padd">
-          <h2><?= $_LANG["ABOUT_MAIN_TITLE"]; ?></h2>
+          <h2><?= __("About Me") ?></h2>
         </div>
       </div>
       <div class="row">
         <div class="content padd">
           <div class="row">
             <div class="text padd">
-              <h3><?= $_LANG["ABOUT_TITLE_1"]; ?> <span><?= $_LANG["ABOUT_SUBTITLE_1"]; ?></span></h3>
+              <h3><?= __("I'm Salah Bakhash and I'm a") ?> <span><?= __("Web Developer") ?></span></h3>
               <p>
-                <?= $_LANG["ABOUT_INFO_1"]; ?>
+                <?= __("I used to freelance as a video editor and graphic designer, Then I learned web development and started creating content as a web developer") ?>
               </p>
             </div>
           </div>
@@ -41,37 +41,37 @@
             <div class="info block">
               <div class="row">
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_PROJECT_COUNT"]; ?> : <span>15</span></p>
+                  <p><?= __("projects count") ?> : <span>15</span></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_JOB_TITLE"]; ?> : <span>Full-Stack Developer</span></p>
+                  <p><?= __("job title") ?> : <span>Full-Stack Developer</span></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <a href="mailto:salahbakhash@gmail.com" style="text-transform: none;">salahbakhash@gmail.com</a></p>
-                  <!-- <p><?= $_LANG["ABOUT_EMAIL"]; ?> : <a href="mailto:contact@salahbakhash.com" style="text-transform: none;">contact@salahbakhash.com</a></p> -->
+                  <p><?= __("email") ?> : <a href="mailto:salahbakhash@gmail.com" style="text-transform: none;">salahbakhash@gmail.com</a></p>
+                  <!-- <p><?= __("email") ?> : <a href="mailto:contact@salahbakhash.com" style="text-transform: none;">contact@salahbakhash.com</a></p> -->
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_PHONE"]; ?> : <a href="tel:+905527188570">+905527188570</a></p>
+                  <p><?= __("phone") ?> : <a href="tel:+905527188570">+905527188570</a></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_COUNTRY"]; ?> : <span><?= $_LANG["ABOUT_TURKEY"]; ?></span></p>
+                  <p><?= __("country") ?> : <span><?= __("Turkey") ?></span></p>
                 </div>
                 <div class="item padd">
-                  <p><?= $_LANG["ABOUT_FREELANCE"]; ?> : <span><?= $_LANG["ABOUT_AVAILABLE"]; ?></span></p>
+                  <p><?= __("freelance") ?> : <span><?= __("Available") ?></span></p>
                 </div>
               </div>
               <div class="row">
                 <div class="btns padd">
-                  <a href="./media/my-cv.pdf" download="salah-CV.pdf" class="btn"><?= $_LANG["ABOUT_DOWNLOAD_CV"]; ?></a>
-                  <a href="#contact" data-page="contact" class="targeted-link btn"><?= $_LANG["ABOUT_HIRE_ME"]; ?></a>
+                  <a href="/media/salah-cv.pdf" download="salah-cv.pdf" class="btn"><?= __("download cv") ?></a>
+                  <a href="#contact" data-page="contact" class="targeted-link btn"><?= __("hire me") ?></a>
                 </div>
               </div>
             </div>
             <div class="skills-section block padd">
               <div class="row">
                 <div class="col skills">
-                  <h4 class="title">Working Stacks</h4>
-                  <div class="row">
+                  <h4 class="title"><?= __("Working Stacks") ?></h4>
+                  <div class="row" dir="ltr">
                     <div class="col">
                       <h6 class="sub-title">LAMP stack:</h6>
                       <div class="techs">
@@ -91,7 +91,7 @@
                   </div>
                 </div>
                 <div class="col knowledge">
-                  <h4 class="title">Technical Skills</h4>
+                  <h4 class="title"><?= __("Technical Skills") ?></h4>
                   <div class="list">
                     <div class="item">Laravel</div>
                     <div class="item">PHP</div>
@@ -111,7 +111,7 @@
           </div>
           <div class="row history">
             <div class="education padd">
-              <h3 class="title"><?= $_LANG["ABOUT_TITLE_1"]; ?></h3>
+              <h3 class="title"><?= __("experience") ?></h3>
               <div class="row">
                 <div class="box padd">
                   <div class="timeline shadow">
@@ -119,11 +119,15 @@
                     <div class="item">
                       <div class="circle"></div>
                       <h3 class="date">
-                        <i class="fa fa-calendar"></i> 2023 - Present
+                        <i class="fa fa-calendar"></i> 2023 - <?= __("Present") ?>
                       </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_SECTION_3_TITLE"]; ?></h4>
+                      <h4 class="title"><?= __("Full-Stack Web Developer At HashNet") ?></h4>
                       <div class="text">
-                        <?= $_LANG["ABOUT_SECTION_3_INFO"]; ?>
+                        <ul>
+                          <li><?= __("Developed a custom CMS using (Pure PHP, MySQL) with a folder-based blocks for articles, portfolios, testimonials, authentication, and categories to develop websites faster") ?></li><br />
+                          <li><?= __("Created and maintained over 11 WordPress websites, including backups and data entry") ?></li><br />
+                          <li><?= __("Provided ongoing maintenance and technical support for web projects") ?></li><br />
+                        </ul>
                       </div>
                     </div>
                     <div class="item">
@@ -131,19 +135,27 @@
                       <h3 class="date">
                         <i class="fa fa-calendar"></i> 2022 - 2023
                       </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_SECTION_2_TITLE"]; ?></h4>
+                      <h4 class="title"><?= __("Software Developer At DXN Taksim") ?></h4>
                       <div class="text">
-                        <?= $_LANG["ABOUT_SECTION_2_INFO"]; ?>
+                        <ul>
+                          <li>
+                            <?= __("Developed various tools to automate manual processes, including a points calculation tool for billing, improving efficiency and accuracy.") ?>
+                          </li>
+                          <br />
+                          <li>
+                            <?= __("Developed a new accounting system, converting the paper system into a digital accounting system that calculates on a daily basis.") ?>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                     <div class="item">
                       <div class="circle"></div>
                       <h3 class="date">
-                        <i class="fa fa-calendar"></i> 2019 - Present
+                        <i class="fa fa-calendar"></i> 2019 - <?= __("Present") ?>
                       </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_SECTION_1_TITLE"]; ?></h4>
+                      <h4 class="title"><?= __("Freelancing") ?></h4>
                       <p class="text">
-                        <?= $_LANG["ABOUT_SECTION_1_INFO"]; ?>
+                        <?= __("Completed over 21 web development projects, including more than 13 paid freelance projects with a very good clients testimonials, some of it can be seen at <a href='https://mostaql.com/u/salah_bakhash/reviews'>Mostaql platform</a>.") ?>
                       </p>
                     </div>
                   </div>
@@ -151,119 +163,20 @@
               </div>
             </div>
             <div class="experience padd">
-              <h3 class="title"><?= $_LANG["ABOUT_TITLE_2"]; ?></h3>
+              <h3 class="title"><?= __("projects") ?></h3>
               <div class="row">
                 <div class="box padd">
                   <div class="timeline shadow">
-                    <!-- ===== item ===== -->
-                    <div class="item">
-                      <div class="circle"></div>
-                      <h3 class="date">
-                        <i class="fa fa-calendar"></i> 2021 - 2023
-                      </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_TITLE_2_1_TITLE"]; ?></h4>
+                    <div class="item no-border">
+                      <h4 class="title"><?= __("wide range of experience") ?></h4>
                       <p class="text">
-                        <?= $_LANG["ABOUT_TITLE_2_1_INFO"]; ?>
-                      </p>
-                    </div>
-                    <div class="item">
-                      <div class="circle"></div>
-                      <h3 class="date">
-                        <i class="fa fa-calendar"></i> 2022 - 12 - 1
-                      </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_TITLE_2_2_TITLE"]; ?></h4>
-                      <p class="text">
-                        <?= $_LANG["ABOUT_TITLE_2_2_INFO"]; ?>
-                      </p>
-                    </div>
-                    <div class="item">
-                      <div class="circle"></div>
-                      <h3 class="date">
-                        <i class="fa fa-calendar"></i> 2023 - 2 - 2
-                      </h3>
-                      <h4 class="title"><?= $_LANG["ABOUT_TITLE_2_3_TITLE"]; ?></h4>
-                      <p class="text">
-                        <?= $_LANG["ABOUT_TITLE_2_3_INFO"]; ?>
+                        <?= str_replace("##lang##", $_lang, __("I have completed a wide range of projects, from web development to custom software solutions using different technologies,</br> and I'm proud to showcase them</br> on my <a href='/##lang##/portfolio'>portfolio page</a>.</br></br> Each project is demonstrating my ability to deliver solutions for various needs.</br></br>You can explore detailed descriptions, features, and the technologies of my projects there.")) ?>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="advantages" class="page advantages <?= $_page == "strength" ? "active" : ""; ?>">
-    <div class="container">
-      <div class="row">
-        <div class="page-title padd">
-          <h2><?= $_LANG["ADVANTAGE_MAIN_TITLE"]; ?></h2>
-        </div>
-      </div>
-      <div class="row services-container">
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fa fa-palette"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_1_TITLE"]; ?></h4>
-            <p class="text"><?= $_LANG["ADVANTAGE_1_INFO"]; ?></p>
-          </div>
-        </div>
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fa fa-laptop-code"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_2_TITLE"]; ?></h4>
-            <p class="text">
-              <?= $_LANG["ADVANTAGE_2_INFO"]; ?>
-            </p>
-          </div>
-        </div>
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fa fa-mobile-alt"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_3_TITLE"]; ?></h4>
-            <p class="text">
-              <?= $_LANG["ADVANTAGE_3_INFO"]; ?>
-            </p>
-          </div>
-        </div>
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fa fa-code"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_4_TITLE"]; ?></h4>
-            <p class="text">
-              <?= $_LANG["ADVANTAGE_4_INFO"]; ?>
-            </p>
-          </div>
-        </div>
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-tachometer-alt"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_5_TITLE"]; ?></h4>
-            <p class="text"><?= $_LANG["ADVANTAGE_5_INFO"]; ?></p>
-          </div>
-        </div>
-        <div class="service padd">
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-hands-helping"></i>
-            </div>
-            <h4 class="title"><?= $_LANG["ADVANTAGE_6_TITLE"]; ?></h4>
-            <p class="text">
-              <?= $_LANG["ADVANTAGE_6_INFO"]; ?>
-            </p>
           </div>
         </div>
       </div>
@@ -274,12 +187,12 @@
     <div class="container">
       <div class="row">
         <div class="page-title padd">
-          <h2><?= $_LANG["PORTFOLIO_MAIN_TITLE"]; ?></h2>
+          <h2><?= __("Portfolio") ?></h2>
         </div>
       </div>
       <div class="row">
         <div class="heading padd">
-          <h2 class="title"><?= $_LANG["PORTFOLIO_MY_BEST_PROJECTS"]; ?> :</h2>
+          <h2 class="title"><?= __("My Best Projects") ?> :</h2>
         </div>
       </div>
       <div class="row">
@@ -333,60 +246,60 @@
     <div class="container">
       <div class="row">
         <div class="page-title padd">
-          <h2><?= $_LANG["CONTACT_MAIN_TITLE"]; ?></h2>
+          <h2><?= __("Contact Me") ?></h2>
         </div>
       </div>
-      <h3 class="title padd"><?= $_LANG["CONTACT_1_TITLE"]; ?></h3>
-      <h4 class="sub-title padd"><?= $_LANG["CONTACT_1_SUBTITLE"]; ?></h4>
+      <h3 class="title padd"><?= __("do you have any questions ?") ?></h3>
+      <h4 class="sub-title padd"><?= __("i am here for you") ?></h4>
       <div class="row contacts-container">
         <div class="info-item padd">
           <div class="icon"><i class="fa fa-phone"></i></div>
-          <h4 class="title"><?= $_LANG["CONTACT_CALL_ME"]; ?></h4>
+          <h4 class="title"><?= __("Call Me") ?></h4>
           <a href="tel:+905527188570" class="value link">+90 552 718 85 70</a>
         </div>
         <div class="info-item padd">
           <div class="icon"><i class="fab fa-whatsapp"></i></div>
-          <h4 class="title"><?= $_LANG["CONTACT_WHATSAPP"]; ?></h4>
-          <a href="https://api.whatsapp.com/send?phone=905527188570" class="value link"><?= $_LANG["CONTACT_WHATSAPP_INFO"]; ?></a>
+          <h4 class="title"><?= __("Whatsapp") ?></h4>
+          <a href="https://api.whatsapp.com/send?phone=905527188570" class="value link"><?= __("message me") ?></a>
         </div>
         <div class="info-item padd">
           <div class="icon"><i class="fa fa-envelope"></i></div>
-          <h4 class="title"><?= $_LANG["CONTACT_EMAIL"]; ?></h4>
+          <h4 class="title"><?= __("Email") ?></h4>
           <a href="mailto:salahbakhash@gmail.com?subject=from%20personal%20website" class="value link">salahbakhash@gmail.com</a>
         </div>
         <div class="info-item padd">
           <div class="icon"><i class="fa fa-globe-europe"></i></div>
-          <h4 class="title"><?= $_LANG["CONTACT_WEBSITE"]; ?></h4>
+          <h4 class="title"><?= __("Website") ?></h4>
           <a href="/" class="value link">salahbakhash.com</a>
         </div>
       </div>
-      <h3 class="title padd"><?= $_LANG["CONTACT_SEND_EMAIL"]; ?></h3>
-      <h4 class="sub-title padd"><?= $_LANG["CONTACT_EMAIL_INFO"]; ?></h4>
+      <h3 class="title padd"><?= __("send me a message") ?></h3>
+      <h4 class="sub-title padd"><?= __("I'm very responsive to my messages, make sure to leave your email or phone number to contact you back") ?></h4>
       <div class="row">
         <form class="form padd" method="post" id="contact-form">
           <div class="row">
             <div class="form-item col-6 padd">
               <div class="form-group">
-                <input name="name" type="text" class="form-control" placeholder="<?= $_LANG["CONTACT_NAME_HOLDER"]; ?>">
+                <input name="name" type="text" class="form-control" placeholder="<?= __("Name") ?>">
               </div>
             </div>
             <div class="form-item col-6 padd">
               <div class="form-group">
-                <input name="contact" type="text" class="form-control" placeholder="<?= $_LANG["CONTACT_EMAIL_HOLDER"]; ?>">
+                <input name="contact" type="text" class="form-control" placeholder="<?= __("Email Or Phone Number") ?>">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-item col-12 padd">
               <div class="form-group">
-                <textarea name="message" class="form-control" placeholder="<?= $_LANG["CONTACT_MSG_HOLDER"]; ?>"></textarea>
+                <textarea name="message" class="form-control" placeholder="<?= __("Message") ?>"></textarea>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-item col-12 padd">
               <div class="form-group">
-                <button type="submit" class="btn"><?= $_LANG["CONTACT_SENR_MSG"]; ?></button>
+                <button type="submit" class="btn"><?= __("Send Message") ?></button>
               </div>
             </div>
           </div>

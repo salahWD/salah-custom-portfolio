@@ -422,9 +422,9 @@ ul {
 .about .content .skills-section {
   margin-top: 110px;
 }
-.about .content .skills-section .skills {
+/* .about .content .skills-section .skills {
   flex-shrink: 0;
-}
+} */
 .about .content .skills-section .skills .sub-title {
   color: var(--text-black-900);
   text-transform: capitalize;
@@ -433,8 +433,12 @@ ul {
   font-size: 16px;
   font-weight: 400;
 }
+.about .content .skills-section .knowledge {
+  flex: 1;
+}
 .about .content .skills-section .knowledge .list {
   display: flex;
+  min-width: 350px;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -473,7 +477,7 @@ ul {
   color: var(--text-black-900);
 }
 .about .content .skills-section .row {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .about .content .skills-section .item .title {
@@ -519,7 +523,7 @@ ul {
 .about :is(.education, .experience) .timeline .item:last-child {
   padding-bottom: 0;
 }
-.about :is(.education, .experience) .timeline .item::before {
+.about :is(.education, .experience) .timeline .item:not(.no-border)::before {
   content: "";
   width: 1px;
   position: absolute;
@@ -555,7 +559,7 @@ ul {
   color: var(--text-black-900);
 }
 .about :is(.education, .experience) .timeline .item .text {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55rem;
   color: var(--text-black-700);
 }
@@ -937,6 +941,10 @@ ul {
 }
 
 @media (max-width: 767px) {
+  .padd {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .about .content .text p {
     max-width: 70ch;
   }
@@ -963,10 +971,6 @@ ul {
   }
   .about .content .info .btns {
     margin: 30px auto 0;
-  }
-  .about :is(.education, .experience) .timeline .item .text,
-  .about :is(.education, .experience) .timeline .item .title {
-    text-align: center;
   }
   .about :is(.education, .experience) .timeline .item:not(:last-child)::after {
     content: "";
@@ -995,22 +999,44 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .main-container {
+    --nav-width: min(80vw, 270px);
+  }
+  .header.active .nav-toggler {
+    left: calc(var(--nav-width) + 8px);
+  }
+  .padd {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .home .info {
     text-align: center;
   }
+  .home .info .title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
   .home .info .title .special.name {
+    font-size: 42px;
     display: block;
   }
   .home .container {
-    padding-top: 50px;
+    margin-top: 0;
+    padding-top: 80px;
     padding-bottom: 50px;
   }
+  .about .content,
+  .about :is(.education, .experience),
+  .about :is(.education, .experience) .box {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .about .content .info .item p {
-    padding: 0 35px 15px;
+    padding: 0 5px 15px;
     width: 100%;
   }
   .about :is(.education, .experience) .timeline .item .text {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75rem;
   }
   .advantages .services-container {
