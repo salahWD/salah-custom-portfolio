@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+/Salah_Bakhash_CV*
+/private/
+/.preview/
+/node_modules/

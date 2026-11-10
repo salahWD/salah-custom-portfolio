@@ -1,0 +1,12 @@
+Options -Indexes
+RewriteEngine On
+
+# Keep source notes, raw CVs, configuration, and test tooling outside public access.
+RewriteRule ^(?:includes|langs|private|scripts|tests|node_modules|my[\x20]work)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(?:PORTFOLIO_BRIEF|CONTENT_COVERAGE|REVIEW_NOTES|README)\.md$ - [F,L,NC]
+RewriteRule ^Salah_Bakhash_CV.*$ - [F,L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
