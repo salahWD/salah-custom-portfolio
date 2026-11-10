@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <?php if ($_lang === 'ar'): ?><link rel="stylesheet" href="/css/ar.css"><?php endif ?>
+  <link rel="stylesheet" href="<?= e(asset_url('/css/style.css')) ?>">
+  <?php if ($_lang === 'ar'): ?><link rel="stylesheet" href="<?= e(asset_url('/css/ar.css')) ?>"><?php endif ?>
   <script>document.documentElement.classList.add("js");</script>
-  <script src="/js/script.js" defer></script>
+  <script src="<?= e(asset_url('/js/script.js')) ?>" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main"><?= e(t('Skip to content', 'انتقل إلى المحتوى')) ?></a>

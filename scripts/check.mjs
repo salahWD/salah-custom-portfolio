@@ -37,6 +37,24 @@ for (const lang of ['en','ar']) {
   }
 }
 for(const path of urls)await get(path);
+
+for (const lang of ['en', 'ar']) {
+  const page = await (await get('/' + lang + '/')).text();
+  const assets = ['/css/style.css', '/js/script.js', ...(lang === 'ar' ? ['/css/ar.css'] : [])];
+  for (const asset of assets) {
+    const local = fs.readFileSync(new URL('..' + asset, import.meta.url));
+    const version = createHash('sha256').update(local).digest('hex').slice(0, 12);
+    const url = asset + '?v=' + version;
+    assert.ok(page.includes('"' + url + '"'), lang + ': asset URL must change with file contents');
+    assertions++;
+    const response = await get(url);
+    assert.ok(response.headers.get('content-type').includes(asset.endsWith('.css') ? 'text/css' : 'javascript'), url + ' MIME type');
+    assertions++;
+    assert.deepEqual(Buffer.from(await response.arrayBuffer()), local, url + ' serves the current asset');
+    assertions++;
+  }
+}
+
 for(const path of ['/.env','/.git/config','/includes/data.php','/private/CONTENT_COVERAGE.md','/scripts/browser-check.mjs','/PORTFOLIO_BRIEF.md','/Salah_Bakhash_CV_Fixed.pdf','/my%20work/website_images.psd'])await get(path,403);
 await get('/en/portfolio?category%5B%5D=mobile');
 await get('/?url%5B%5D=en');

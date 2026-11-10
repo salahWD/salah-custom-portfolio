@@ -53,6 +53,11 @@ async function checkPage(path,width,name) {
   assert.equal(result.h1,1,'Expected one h1 on '+path);
   assert.deepEqual(result.brokenImages,[],'Broken images on '+path);
   assert.deepEqual(result.untitledLinks,[],'Unnamed links on '+path);
+  const design = await evaluate("({background:getComputedStyle(document.body).backgroundColor,arrowWidth:parseFloat(getComputedStyle(document.querySelector('.arrow')).width),assets:[...document.querySelectorAll('link[rel=stylesheet][href^=\"/css/\"],script[src^=\"/js/\"]')].map(el=>el.getAttribute('href')||el.getAttribute('src'))})");
+  assert.equal(design.background,'rgb(247, 247, 242)','Current portfolio stylesheet must load on '+path);
+  assert.ok(design.arrowWidth > 0 && design.arrowWidth <= 40,'Arrow styling must load on '+path);
+  assert.ok(design.assets.length >= 2 && design.assets.every(url => /\?v=[a-f0-9]{12}$/.test(url)),'All CSS/JS must use content-versioned URLs on '+path);
+
   console.log('PASS layout',path,width,result.direction);
   if(name) await screenshot(name);
 }

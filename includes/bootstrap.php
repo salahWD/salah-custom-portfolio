@@ -18,6 +18,12 @@ function L(array|string $value): string { global $_lang; return is_array($value)
 function site_url(string $path = ''): string { global $_lang; return '/' . $_lang . '/' . ltrim($path, '/'); }
 function arrow(): string { return '<svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'; }
 function external_arrow(): string { return '<svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'; }
+function asset_url(string $path): string {
+    $path = '/' . ltrim($path, '/');
+    $file = dirname(__DIR__) . $path;
+    $version = is_file($file) ? substr(hash_file('sha256', $file), 0, 12) : 'missing';
+    return $path . '?v=' . $version;
+}
 function project_url(string $slug): string { return site_url('portfolio/' . $slug); }
 
 function project_art(array $project): void {
