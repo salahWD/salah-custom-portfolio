@@ -1,126 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
 
+/* =====================================================================
+   RTL (Arabic)
+   style.css is written with logical properties (inline-start / end),
+   so the layout mirrors automatically once direction is rtl.
+   This file only holds what logical properties can't express and
+   Arabic-specific typography.
+   ===================================================================== */
+
 html:lang(ar) {
   direction: rtl;
+  --dir: -1; /* mirrors the drawer slide and other horizontal transforms */
 }
+
+/* tracking breaks Arabic letter joining */
+html:lang(ar) body *:not(.logo) {
+  letter-spacing: normal !important;
+}
+
+/* the logo is a Latin wordmark: keep it exactly as in English */
+html:lang(ar) .header .logo {
+  direction: ltr;
+}
+
 html:lang(ar) .navbar .links li a {
-  font-size: 17px;
-  letter-spacing: 0.6px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
-html:lang(ar) .navbar .links li a i {
-  margin-right: unset;
-  margin-left: 1rem;
-}
-html:lang(ar) .header {
-  left: unset;
-  right: 0;
-}
-html:lang(ar) .content-page {
-  padding-left: unset;
-  padding-right: var(--nav-width);
-}
-html:lang(ar) .page {
-  left: unset;
-  right: var(--nav-width);
-}
-html:lang(ar) .page-title h2::before,
-html:lang(ar) .page-title h2::after {
-  left: unset;
-  right: 0;
+
+html:lang(ar) .home .info .title.hello {
+  font-size: 22px;
 }
 html:lang(ar) .home .info .title .special.name {
   font-family: 'Gulzar', serif;
+  font-size: clamp(54px, 6vw, 84px);
+  line-height: 1.6;
+  padding-block: 0;
 }
-html:lang(ar) .about .content .info-container {
-  padding-left: 40px;
+html:lang(ar) .home .info .text,
+html:lang(ar) .about .content .text p {
+  font-size: 18px;
+  line-height: 1.85;
 }
-html:lang(ar) .about .content .info .item p :is(span, a) {
-  margin-left: unset;
-  margin-right: 4px;
+
+html:lang(ar) .about .info.block .item p {
+  font-size: 14px;
 }
-html:lang(ar) .about :is(.education, .experience) .timeline .item .text {
-  font-size: 17px;
-}
-html:lang(ar) .about .skills .item .percent {
-  left: 0;
-  right: unset;
-}
-html:lang(ar) .about .skills .item .progress-in {
-  left: unset;
-  right: 0;
-}
-html:lang(ar) .style-swich {
-  right: unset;
-  left: calc(var(--width) * -1);
-}
-html:lang(ar) .style-swich .s-icon {
-  margin-right: unset;
-  margin-left: 25px;
-  right: unset;
-  left: 100%;
-}
-html:lang(ar) .style-swich.active {
-  left: 0;
-}
-html:lang(ar) .style-swich h4 {
-  font-size: 17px;
-  letter-spacing: 1px;
-}
-html:lang(ar) .about :is(.education, .experience) .timeline .item {
-  padding-left: unset;
-  padding-right: 37px;
-}
-html:lang(ar) .about :is(.education, .experience) .timeline .item::before {
-  left: unset;
-  right: 7px;
-}
-html:lang(ar) .about :is(.education, .experience) .timeline .item .circle {
-  left: unset;
-  right: 0;
-}
-html:lang(ar) .about :is(.education, .experience) .timeline .item .date i {
-  margin-right: unset;
-  margin-left: 5px;
-}
-html:lang(ar) .btn,
-html:lang(ar) .contact .form .form-item .btn,
-html:lang(ar) .about .content .info .btns .btn {
+html:lang(ar) .about .timeline .item .text {
   font-size: 16px;
-  font-weight: bold;
+  line-height: 1.9;
+}
+html:lang(ar) .about .timeline .item .text li::before {
+  top: 0.95em;
 }
 
-@keyframes pageShow {
-  from {
-   transform: translateX(-100%);
-   opacity: 0;
-   z-index: 1;
- }
- to {
-   opacity: 1;
-   z-index: 2;
-   transform: translateX(0);
-  }
+html:lang(ar) .contact .info-item .title {
+  font-size: 14px;
 }
 
-@media (max-width: 991px) {
-  html:lang(ar) .header {
-    left: unset;
-    right: calc(var(--nav-width) * -1);
-  }
-  html:lang(ar) .header.active {
-    left: unset;
-    right: 0;
-  }
-  html:lang(ar) .header .nav-toggler {
-    left: unset;
-    right: 30px;
-  }
-  html:lang(ar) .header.active .nav-toggler {
-    left: unset;
-    right: calc(var(--nav-width) + 30px);
-  }
-  /* .content-page.wide .page {
-    
-  } */
+/* phone numbers always read left-to-right ("+90 552 ...") inside RTL text */
+html:lang(ar) a[href^="tel:"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+html:lang(ar) .about .info.block .item p a[href^="tel:"] {
+  width: fit-content;
+}
+html:lang(ar) .contact .info-item a[href^="tel:"] {
+  justify-self: start;
+}
+
+html:lang(ar) .btn {
+  font-size: 16px;
+  font-weight: 700;
 }

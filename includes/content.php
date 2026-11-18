@@ -76,8 +76,8 @@
                       <h6 class="sub-title">LAMP stack:</h6>
                       <div class="techs">
                         <img class="tech" src="/images/techs/laravel.png" alt="laravel">
-                        <img class="tech" style="width: 65px;" src="/images/techs/php.png" alt="apache">
-                        <img class="tech" style="width: 75px;" src="/images/techs/mysql.png" alt="mysql">
+                        <img class="tech" src="/images/techs/php.png" alt="apache">
+                        <img class="tech" src="/images/techs/mysql.png" alt="mysql">
                       </div>
                     </div>
                     <div class="col">
@@ -85,7 +85,7 @@
                       <div class="techs">
                         <img class="tech" src="/images/techs/firebase.png" alt="firebase">
                         <img class="tech" src="/images/techs/react.png" alt="react">
-                        <img class="tech" style="width: auto;" src="/images/techs/nodejs.png" alt="nodejs">
+                        <img class="tech" src="/images/techs/nodejs.png" alt="nodejs">
                       </div>
                     </div>
                   </div>
@@ -309,9 +309,9 @@
   </section>
 
   <div class="style-swich" id="color-switch">
-    <div class="day-night s-icon" onclick="toggleMood('mood-toggler')">
-      <i class="fas fa-sun" id="mood-toggler"></i>
-    </div>
+    <button type="button" class="day-night s-icon" onclick="toggleMood('mood-toggler')" aria-label="Toggle light / dark mode">
+      <i class="fas fa-sun" id="mood-toggler" aria-hidden="true"></i>
+    </button>
   </div>
 
 </main>
