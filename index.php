@@ -1,6 +1,6 @@
 <?php
 
-const HOST_PATH = "http://customforsalah.test/";
+const HOST_PATH = "https://salahbakhash.com/";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $env = parse_ini_file('.env');

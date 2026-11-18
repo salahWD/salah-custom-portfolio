@@ -11,13 +11,13 @@
   <!-- font awesome @5.15.4 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- custom style (global) -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=2">
   <?php if ($_lang == "ar") : ?>
     <!-- custom style (RTL language) -->
-    <link rel="stylesheet" href="/css/ar.css">
+    <link rel="stylesheet" href="/css/ar.css?v=2">
   <?php endif; ?>
   <!-- custom style (themes) -->
-  <link rel="stylesheet" id="themes" class="themes" href="/css/themes/themes.css">
+  <link rel="stylesheet" id="themes" class="themes" href="/css/themes/themes.css?v=2">
 </head>
 
 <body class="dark">

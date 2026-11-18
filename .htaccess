@@ -1,4 +1,9 @@
+Options -Indexes
 RewriteEngine on
+
+# Keep configuration, includes, and source files outside public access (carried over from the previous live site).
+RewriteRule ^(?:includes|langs|private|scripts|tests|node_modules|my[\x20]work)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
