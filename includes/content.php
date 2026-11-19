@@ -196,50 +196,56 @@
           <h2 class="title"><?= __("My Best Projects") ?> :</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-1.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-2.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-3.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-4.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-5.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="item padd">
-          <div class="inner shadow">
-            <div class="img">
-              <img src="/images/portfolio-6.jpg" alt="">
-            </div>
-          </div>
-        </div>
+      <?php
+      $projects = require __DIR__ . '/projects.php';
+      $isArabic = $_lang === 'ar';
+      ?>
+      <div class="project-grid">
+        <?php foreach ($projects as $index => $project) :
+          $number = $index + 1;
+          $detail = $project[$_lang];
+          $title = htmlspecialchars($detail['title'], ENT_QUOTES, 'UTF-8');
+        ?>
+          <button type="button" class="inner project-card" aria-haspopup="dialog" aria-controls="project-<?= $number ?>">
+            <span class="img"><img src="/images/portfolio-<?= $number ?>.jpg" alt="" width="500" height="360"></span>
+            <span class="project-card-title"><?= $title ?></span>
+          </button>
+        <?php endforeach; ?>
       </div>
+
+      <?php foreach ($projects as $index => $project) :
+        $number = $index + 1;
+        $detail = $project[$_lang];
+      ?>
+        <dialog class="project-dialog" id="project-<?= $number ?>" aria-labelledby="project-title-<?= $number ?>">
+          <div class="project-dialog-heading">
+            <div>
+              <p class="project-demo"><?= $isArabic ? 'تفاصيل تجريبية' : 'Demo details' ?></p>
+              <h2 id="project-title-<?= $number ?>"><?= htmlspecialchars($detail['title'], ENT_QUOTES, 'UTF-8') ?></h2>
+            </div>
+            <form method="dialog">
+              <button type="submit" class="icon-button" aria-label="<?= $isArabic ? 'إغلاق التفاصيل' : 'Close details' ?>" autofocus>×</button>
+            </form>
+          </div>
+          <img class="project-preview" src="/images/portfolio-<?= $number ?>.jpg" alt="" width="500" height="360" loading="lazy">
+          <div class="project-detail">
+            <h3><?= $isArabic ? 'وصف المشروع' : 'Project description' ?></h3>
+            <p><?= htmlspecialchars($detail['description'], ENT_QUOTES, 'UTF-8') ?></p>
+          </div>
+          <div class="project-detail">
+            <h3><?= $isArabic ? 'التقنيات المستخدمة' : 'Tech stack' ?></h3>
+            <ul class="project-stack">
+              <?php foreach ($project['stack'] as $technology) : ?>
+                <li dir="ltr"><?= htmlspecialchars($technology, ENT_QUOTES, 'UTF-8') ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          <div class="project-detail project-review">
+            <h3><?= $isArabic ? 'مثال على رأي عميل' : 'Sample client review' ?></h3>
+            <blockquote><?= htmlspecialchars($detail['review'], ENT_QUOTES, 'UTF-8') ?></blockquote>
+          </div>
+        </dialog>
+      <?php endforeach; ?>
     </div>
   </section>
 

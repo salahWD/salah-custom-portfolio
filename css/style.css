@@ -221,7 +221,7 @@ img { display: block; max-inline-size: 100%; }
 
 .portfolio .heading { margin-block-end: 1.25rem; }
 .portfolio .heading .title { font-size: clamp(1.2rem, 3vw, 1.7rem); }
-.portfolio .container > .row:last-child {
+.project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(.85rem, 2.4vw, 1.8rem);
@@ -236,6 +236,50 @@ img { display: block; max-inline-size: 100%; }
 .portfolio .img { overflow: hidden; border-radius: .5rem; }
 .portfolio img { width: 100%; aspect-ratio: 25 / 18; object-fit: contain; transition: transform .35s ease; }
 .portfolio .inner:hover img { transform: scale(1.025); }
+
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--ink);
+  text-align: start;
+  transition: transform .2s, border-color .2s;
+}
+.project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.project-card:active { transform: translateY(1px); }
+.project-card .img { display: block; width: 100%; }
+.project-card-title { padding: .8rem .65rem .6rem; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 800; }
+
+body:has(.project-dialog[open]) { overflow: hidden; }
+.project-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(42rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: clamp(1rem, 4vw, 1.75rem);
+  border: 1px solid var(--line);
+  border-radius: .95rem;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 20px 70px #0005;
+  overscroll-behavior: contain;
+}
+.project-dialog::backdrop { background: #101018b8; }
+.project-dialog-heading { display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-block-end: 1rem; }
+.project-dialog-heading h2 { font-size: clamp(1.45rem, 5vw, 2.25rem); line-height: 1.25; }
+.project-dialog-heading .icon-button { font-size: 1.5rem; line-height: 1; }
+.project-demo { margin-block-end: .25rem; color: var(--accent); font-size: .875rem; font-weight: 800; }
+.portfolio .project-preview { height: auto; border: 1px solid var(--line); border-radius: .65rem; }
+.project-detail { margin-block-start: 1.2rem; }
+.project-detail h3 { margin-block-end: .35rem; font-size: 1.05rem; }
+.project-detail p, .project-review blockquote { color: var(--muted); }
+.project-stack { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.project-stack li { padding: .2rem .6rem; border: 1px solid var(--line); border-radius: .4rem; font-size: .875rem; }
+.project-review { padding-inline-start: .85rem; border-inline-start: 2px solid var(--accent); }
+.project-review blockquote { margin: 0; }
 
 .contact .container > .title { font-size: clamp(1.4rem, 3vw, 2rem); text-transform: capitalize; }
 .contact .sub-title { color: var(--muted); font-size: 1rem; font-weight: 500; max-width: 65ch; }
@@ -288,7 +332,7 @@ textarea.form-control { min-height: 9rem; resize: vertical; }
   .img-holder { aspect-ratio: 6 / 5; }
 }
 @media (max-width: 30rem) {
-  .portfolio .container > .row:last-child, .contact .form > .row:first-child { grid-template-columns: minmax(0, 1fr); }
+  .project-grid, .contact .form > .row:first-child { grid-template-columns: minmax(0, 1fr); }
   .contact .form > .row:first-child { gap: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
