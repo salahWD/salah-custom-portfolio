@@ -54,16 +54,7 @@ function activateHashPage() {
     else link.removeAttribute("aria-current");
   });
 }
-if (location.hash) activateHashPage();
-window.addEventListener("hashchange", activateHashPage);
-
-
-const portfolio = document.getElementById("portfolio");
-portfolio.addEventListener("click", (event) => {
-  const card = event.target.closest(".project-card");
-  if (card) {
-    const dialog = document.getElementById(card.getAttribute("aria-controls"));
-    dialog.showModal();
-    dialog.scrollTop = 0;
-  }
-});
+if (initialPage) {
+  if (location.hash) activateHashPage();
+  window.addEventListener("hashchange", activateHashPage);
+}

@@ -5,7 +5,7 @@
       <ul class="links">
         <?php foreach (['home' => 'home', 'about' => 'user', 'portfolio' => 'briefcase', 'contact' => 'comments'] as $page => $icon) : ?>
           <li>
-            <a href="/<?= $_lang ?>/<?= $page ?>" data-page="<?= $page ?>"<?= $_page === $page ? ' class="active" aria-current="page"' : '' ?>>
+            <a href="/<?= $_lang ?>/<?= $page ?>" data-page="<?= $page ?>"<?= $_page === $page ? ($isProjectRoute ? ' class="active" aria-current="location"' : ' class="active" aria-current="page"') : '' ?>>
               <i class="fa fa-<?= $icon ?>" aria-hidden="true"></i> <?= __($page) ?>
             </a>
           </li>
